@@ -1,0 +1,30 @@
+{% extends 'notes/main.html' %}
+
+{% block content %}
+	<br>
+
+		<div class="row">
+			<div class="col-md">
+				<h5>Snippet</h5>
+			</div>
+			<div class="card card-body">
+				<table class="table">
+					<tr>
+						<th>Title</th>
+						<th>Language</th>
+						<th>Description</th>
+					</tr>
+
+					{% for i in snippet %}
+						<tr>
+							<td>{{i.title}}</td>
+							<td>{{i.language}}</td>
+							<td>{{i.description}}</td>
+						<tr>
+					{ % endfor %}
+
+				</table>
+			</div>
+		</div>
+
+{% endblock  %}
